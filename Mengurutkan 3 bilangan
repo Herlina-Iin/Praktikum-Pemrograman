@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int bil1, bil2, bil3;
+
+    // Meminta input dari user
+    cout << "Inputkan bilangan 1: ";
+    cin >> bil1;
+    cout << "Inputkan bilangan 2: ";
+    cin >> bil2;
+    cout << "Inputkan bilangan 3: ";
+    cin >> bil3;
+
+    // Menentukan bilangan terbesar
+    int terbesar = bil1;
+
+    if (bil2 > terbesar) {
+        terbesar = bil2;
+    }
+
+    if (bil3 > terbesar) {
+        terbesar = bil3;
+    }
+
+    // Menampilkan bilangan terbesar
+    cout << "Bilangan terbesar adalah: " << terbesar << endl;
+
+    return 0;
+}
