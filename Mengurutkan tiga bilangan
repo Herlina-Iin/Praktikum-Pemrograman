@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int bil1, bil2, bil3, terbesar;
 
-    // Input dari pengguna
+    // Input dari user
     cout << "Masukkan bilangan 1: ";
     cin >> bil1;
     cout << "Masukkan bilangan 2: ";
