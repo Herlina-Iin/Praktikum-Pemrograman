@@ -22,6 +22,6 @@ $(TARGET): $(SRC)
 clean:
 	rm -f $(TARGET)
 
-Test Case 5:
+Test Case:
 Input: 100
 Expected Output: Jumlah dari 1 hingga 100 : 5050
