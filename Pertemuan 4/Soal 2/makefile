@@ -1,29 +1,26 @@
-# Makefile for compiling multiplication.cpp
-
-# Compiler
 CXX = g++
 
-# Compiler flags
-CXXFLAGS = -Wall -g
+CXXFLAGS = -std=c++11 -Wall
 
-# Target executable
 TARGET = multiplication
 
-# Source file
-SRC = multiplication.cpp
-
-# Rule to build the executable
 all: $(TARGET)
 
-$(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+$(TARGET): multiplication.o
+	$(CXX) $(CXXFLAGS) -o $(TARGET) multiplication.o
 
-# Clean rule to remove the executable and object files
+multiplication.o: multiplication.cpp
+	$(CXX) $(CXXFLAGS) -c multiplication.cpp
+
+run:
+	./$(TARGET) < test.txt
+
 clean:
-	rm -f $(TARGET)
+	rm -f *.o $(TARGET)
 
 Test Case:
 Input: 5
+
 Expected Output:
 Masukkan angka: 5
 Tabel Perkalian untuk 5:
