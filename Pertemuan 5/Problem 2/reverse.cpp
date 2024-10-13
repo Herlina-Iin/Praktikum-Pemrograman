@@ -21,7 +21,7 @@ int main(){
         cin>>arr[i];
     }
     vector<int>reversed=reverseArraykeVector(arr,n);
-    cout<<"Vektor terbalik : ";
+    cout<<"Angka terbalik : ";
     for(const int& num:reversed){
         cout<<num<<" ";
     }
