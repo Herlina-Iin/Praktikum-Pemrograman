@@ -3,10 +3,18 @@
 #include<string>
 using namespace std;
 
-//Problem 1: FizzBuzz with vectors
+vector<int>reverseVector(const vector<int>&input){
+    vector<int>reverse;
+
+    for (int i=input.size()-1;i>=0;i--){
+        reverse.push_back(input[i]);
+    }
+    return reverse;
+}
+
 int main() {
+//Problem 1: FizzBuzz with vectors
     vector<string>hasil;
-    
     for(int i=1;i<=100;i++){
         if(i%3==0&&i%5==0){
             hasil.push_back("FizzBuzz");
@@ -21,21 +29,9 @@ int main() {
     for(const string& str:hasil){
         cout<<str<<endl;
     }
-        
-    return 0;
-}
-
-// Problem 2: Reverse an array
-vector<int>reverseVector(const vector<int>&input){
-    vector<int>reverse;
-
-    for (int i=input.size()-1;i>=0;i--){
-        reverse.push_back(input[i]);
-    }
-    return reverse;
-}
-
-int main(){
+    cout<<endl;
+    
+//Problem 2: reverse an array
     vector<int>vectorOriginal={1, 2, 3, 4, 5};
     cout<<"Vektor Original: ";
     for(const int& num:vectorOriginal){
@@ -50,6 +46,6 @@ int main(){
         cout<<num<<" ";
     }
     cout<<endl;
-
+    
     return 0;
 }
