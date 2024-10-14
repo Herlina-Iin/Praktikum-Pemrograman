@@ -3,13 +3,12 @@
 #include<string>
 using namespace std;
 
-vector<int>reverseVector(const vector<int>&input){
-    vector<int>reverse;
-
-    for (int i=input.size()-1;i>=0;i--){
-        reverse.push_back(input[i]);
+vector<int> reverseVector(const vector<int>& input) {
+    vector<int> reversed;
+    for (int i = input.size() - 1; i >= 0; --i) {
+        reversed.push_back(input[i]);
     }
-    return reverse;
+    return reversed;
 }
 
 int main() {
@@ -32,20 +31,20 @@ int main() {
     cout<<endl;
     
 //Problem 2: reverse an array
-    vector<int>vectorOriginal={1, 2, 3, 4, 5};
-    cout<<"Vektor Original: ";
-    for(const int& num:vectorOriginal){
-        cout<<num<<" ";
-    }
-    cout<<endl;
+    vector<int> original = {1, 2, 3, 4, 5};
 
-    vector<int>reversed=reverseVector
-        (vectorOriginal);
-    cout<<"Vektor terbalik: ";
-    for(const int& num:reversed){
-        cout<<num<<" ";
+    cout << "Vektor asli: ";
+    for (const int& num : original) {
+        cout << num << " ";
     }
-    cout<<endl;
-    
+    cout << endl;
+
+    vector<int> reversed = reverseVector(original);
+    cout << "Vektor terbalik: ";
+    for (const int& num : reversed) {
+        cout << num << " ";
+    }
+    cout << endl;
+
     return 0;
 }
