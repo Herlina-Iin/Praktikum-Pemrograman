@@ -3,6 +3,7 @@
 #include<string>
 using namespace std;
 
+//Problem 1: FizzBuzz with vectors
 int main() {
     vector<string>hasil;
     
@@ -21,5 +22,34 @@ int main() {
         cout<<str<<endl;
     }
         
+    return 0;
+}
+
+// Problem 2: Reverse an array
+vector<int>reverseVector(const vector<int>&input){
+    vector<int>reverse;
+
+    for (int i=input.size()-1;i>=0;i--){
+        reverse.push_back(input[i]);
+    }
+    return reverse;
+}
+
+int main(){
+    vector<int>vectorOriginal={1, 2, 3, 4, 5};
+    cout<<"Vektor Original: ";
+    for(const int& num:vectorOriginal){
+        cout<<num<<" ";
+    }
+    cout<<endl;
+
+    vector<int>reversed=reverseVector
+        (vectorOriginal);
+    cout<<"Vektor terbalik: ";
+    for(const int& num:reversed){
+        cout<<num<<" ";
+    }
+    cout<<endl;
+
     return 0;
 }
