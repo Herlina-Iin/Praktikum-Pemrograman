@@ -1,8 +1,8 @@
-soal:soal.o
-  g++ soal.o -o soal
-soal.o: soal.cpp
-  g++ -c soal.cpp -o soal.o
-run: soal
-  ./soal
+sum:sum.o
+  g++ sum.o -o sum
+sum.o: sum.cpp
+  g++ -c sum.cpp -o sum.o
+run: sum
+  ./sum
 clean:
-  rm -f soal.o soal
+  rm -f sum.o sum
