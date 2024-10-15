@@ -1,8 +1,37 @@
-sum:sum.o
-  g++ sum.o -o sum
-sum.o: sum.cpp
-  g++ -c sum.cpp -o sum.o
-run: sum
-  ./sum
+# Makefile for FizzBuzz and Vector Reversal
+
+# Compiler
+CXX = g++
+
+# Compiler flags
+CXXFLAGS = -Wall -Wextra -std=c++11
+
+# Target executable
+TARGET = soal
+
+# Source files
+SRCS = soal.cpp
+
+# Object files
+OBJS = $(SRCS:.cpp=.o)
+
+# Default target
+all: $(TARGET)
+
+# Link the executable
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+# Compile source files into object files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Clean target to remove generated files
 clean:
-  rm -f sum.o sum
+	rm -f $(OBJS) $(TARGET)
+
+# Run the program
+run: $(TARGET)
+	./$(TARGET)
+
+.PHONY: all clean run
