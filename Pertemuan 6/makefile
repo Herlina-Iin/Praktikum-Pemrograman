@@ -1,8 +1,25 @@
-barang:barang.o
-  g++ barang.o -o barang
-barang.o:barang.cpp
-  g++ -c barang.cpp -o barang.o
-run:barang
-  ./barang
+CXX = g++
+
+CXXFLAGS = -Wall -Wextra -std=c++11
+
+TARGET = barang
+
+SRCS = barang.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 clean:
-  rm -f barang.o barang
+	rm -f $(OBJS) $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET)
+
+.PHONY: all clean run
