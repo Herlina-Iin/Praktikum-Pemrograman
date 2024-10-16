@@ -13,13 +13,15 @@ int main(){
     const int MAX_BARANG=50;
     Barang barang[MAX_BARANG];
     int n;
-    int totalBarang=0;
-    int totalHarga=0;
-    int rerataHarga=0;
+    float totalBarang=0;
+    float totalHarga=0;
+    float rerataHarga=0;
     
     cout<<"Jumlah barang (max 50): ";
     cin>>n;
     cout<<endl;
+    
+    int total = 0;
     
     for(int i=0; i<n; i++){
         cout<<"Barang ke-"<<i+1<<endl;
@@ -37,7 +39,9 @@ int main(){
         cin>>barang[i].jumlah;
         
         totalBarang+=barang[i].jumlah;
-        rerataHarga+=barang[i].harga/n;
+        int hargatotal = barang[i].jumlah * barang[i].harga;
+        total = total + hargatotal;
+        rerataHarga = total/totalBarang;
         
         cout<<endl;
     }
