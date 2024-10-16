@@ -14,7 +14,6 @@ int main(){
     Barang barang[MAX_BARANG];
     int n;
     float totalBarang=0;
-    float totalHarga=0;
     float rerataHarga=0;
     
     cout<<"Jumlah barang (max 50): ";
