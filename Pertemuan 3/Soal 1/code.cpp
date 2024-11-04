@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cmath>  // For sqrt() function
-#include <iomanip> // For formatting output
+#include <cmath>
+#include <iomanip>
 
 using namespace std;
 
