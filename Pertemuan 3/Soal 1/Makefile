@@ -1,28 +1,25 @@
-# Makefile for compiling quadratic equation solver
+CXX = g++
 
-# Compiler
-CC = g++
+CXXFLAGS = -Wall -Wextra -std=c++11
 
-# Compiler flags
-CFLAGS = -std=c++11 -Wall
+TARGET = Soal_1
 
-# Target executable
-TARGET = quadratic_solver
+SRCS = Code_1
 
-# Source files
-SRCS = main.cpp
-
-# Object files
 OBJS = $(SRCS:.cpp=.o)
 
-# Rule to build the executable
+all: $(TARGET)
+
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Rule to compile the source file into object files
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Clean rule to remove the compiled files
 clean:
 	rm -f $(OBJS) $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET)
+
+.PHONY: all clean run
