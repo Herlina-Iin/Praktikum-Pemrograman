@@ -1,11 +1,9 @@
-
 #include <iostream>
 using namespace std;
 
 int main() {
     int bil1, bil2, bil3, terbesar;
 
-    // Input dari user
     cout << "Masukkan bilangan 1: ";
     cin >> bil1;
     cout << "Masukkan bilangan 2: ";
@@ -13,27 +11,22 @@ int main() {
     cout << "Masukkan bilangan 3: ";
     cin >> bil3;
 
-    // Menentukan bilangan terbesar dari bil1 dan bil2
     switch (bil1 > bil2) {
-        case 1: // bil1 lebih besar dari bil2
+        case 1: 
             terbesar = bil1;
             break;
-        case 0: // bil2 lebih besar atau sama dengan bil1
+        case 0: 
             terbesar = bil2;
             break;
     }
-
-    // Menentukan bilangan terbesar antara terbesar (bil1 atau bil2) dan bil3
     switch (terbesar > bil3) {
-        case 1: // terbesar lebih besar dari bil3
-            // terbesar tetap sama
+        case 1: 
             break;
-        case 0: // bil3 lebih besar dari terbesar
+        case 0: 
             terbesar = bil3;
             break;
     }
 
-    // Menampilkan hasil
     cout << "Bilangan terbesar adalah: " << terbesar << endl;
 
     return 0;
