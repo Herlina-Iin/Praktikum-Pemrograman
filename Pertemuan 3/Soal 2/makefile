@@ -1,6 +1,6 @@
-CC = g++
+CXX = g++
 
-CFLAGS = -std=c++11 -Wall
+CXXFLAGS = -Wall -Wextra -std=c++11
 
 TARGET = code
 
@@ -8,11 +8,18 @@ SRCS = code.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
+all: $(TARGET)
+
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET)
+
+.PHONY: all clean run
