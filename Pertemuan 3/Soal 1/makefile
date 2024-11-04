@@ -2,9 +2,9 @@ CXX = g++
 
 CXXFLAGS = -Wall -Wextra -std=c++11
 
-TARGET = Soal_1
+TARGET = code
 
-SRCS = Code_1
+SRCS = code
 
 OBJS = $(SRCS:.cpp=.o)
 
