@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra -std=c++11
 
 TARGET = code
 
-SRCS = code
+SRCS = code.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
