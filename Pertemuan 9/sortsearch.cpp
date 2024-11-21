@@ -147,7 +147,7 @@ int main() {
     }
 
     // *No 3: Pengubahan Nama*
-    cout << "=== No 3: Mengubah Nama ===" << endl;
+    cout << "\n=== No 3: Mengubah Nama ===" << endl;
     int targetNilai = 60;
     string namaBaru = "Joko";
     ubahNamaByNilai(data, targetNilai, namaBaru);
