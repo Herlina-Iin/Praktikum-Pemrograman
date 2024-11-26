@@ -22,7 +22,6 @@ int main() {
         cin >> daftar2[i];
     }
     int gabungan[n1 + n2];
-    
     for (int i = 0; i < n1; i++) {
         gabungan[i] = daftar1[i];
     }    
@@ -39,4 +38,3 @@ int main() {
 
     return 0;
 }
-
